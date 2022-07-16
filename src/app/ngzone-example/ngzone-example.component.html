@@ -1,0 +1,20 @@
+<h1>Angular ngZone examples</h1>
+<h3>An example how chnage detection wont works using async operations</h3>
+<h3>rezize the panel between 800px</h3>
+<br /><br />
+
+<p>
+  Below is an element with a binding to a property, when media querty changes
+  this property changes as well
+</p>
+<h4 [style.backgroundColor]="color">{{ text }}</h4>
+<input type="checkbox" name="toggle" id="toggle" (click)="toggle()" />
+<label for="toggle">click to enable change detection</label>
+<br />
+<hr />
+<br />
+<p>
+  Below is element is not part of angular change detection process and it will
+  show the actual screen width
+</p>
+<h4 id="element"></h4>

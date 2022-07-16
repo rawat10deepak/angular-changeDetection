@@ -3,16 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgzoneExampleComponent } from './ngzone-example/ngzone-example.component';
+import { ExpressionChangedErrorComponent } from './expression-changed-error/expression-changed-error.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NgzoneExampleComponent,
+    ExpressionChangedErrorComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
