@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let number of numbers">
+    {{ number }}
+  </li>
+</ul>
+<hr />
+<div>ngZoneEventCoalescing demos</div>
+
+<div (click)="parent()">
+  <button (click)="child()">Submit</button>
+</div>

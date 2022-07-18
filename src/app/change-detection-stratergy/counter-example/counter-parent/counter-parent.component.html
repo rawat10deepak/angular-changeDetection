@@ -1,0 +1,54 @@
+<div>
+  <h1>
+    OnPush means that the change detector's mode iwll be set to checkonce during
+    hydration
+  </h1>
+</div>
+
+<hr />
+<span> default strategy </span>
+<app-counter-default-strategy
+  [inputObject]="exampleObject"
+  [counter]="counter"
+></app-counter-default-strategy>
+<hr />
+<span>
+  since CD will trigger only for child component - ui is not updated
+</span>
+
+<hr />
+<span> onpush strategy </span>
+<app-counter-onpush-strategy
+  [inputObject]="exampleObject"
+  [counter]="counter"
+></app-counter-onpush-strategy>
+<input
+  type="button"
+  value="Increase count value"
+  (click)="incrementCounter()"
+/>
+<hr />
+<input
+  type="button"
+  value="Change name property"
+  (click)="changeNameAsProperty()"
+/>
+<hr />
+<input
+  type="button"
+  value="Change name and age object"
+  (click)="changeObjectAndPassAsRefrence()"
+/>
+<hr />
+<span> onpush observable strategy </span>
+<app-counter-onpush-observables-strategy
+  [inputObject]="data"
+></app-counter-onpush-observables-strategy>
+<input
+  type="button"
+  value="Change name using observables"
+  (click)="changeNameAsObservable()"
+/>
+<span>
+  since CD will trigger only ofr child component - ui is not updated
+</span>
